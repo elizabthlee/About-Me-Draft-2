@@ -67,6 +67,10 @@ header {
     margin-top: 50px;
     margin-right: 50px;
     margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .content {
@@ -76,12 +80,12 @@ header {
     font-size: 30px;
 }
 
-section {
+/*section {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-}
+}*/
 
 .aboutMe {
     font-family: "Petit Formal Script";
@@ -157,7 +161,7 @@ and just left and right?^^^^^^*/
 
 /*why is there such a big difference in visual between live and github pages*/
 
-.contactMe {
+.button {
     background-color: black;
     color: white;
     border-radius: 30px;
@@ -220,4 +224,120 @@ what i am doing wrong*/
 
 /*do we have to do this for every 
 webpage we have? or just the about me page?*/
+
+/*UX skills*/
+
+.mySkills {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px;
+
+}
+
+.flexContainer {
+    display: flex;
+}
+
+.skillCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    padding: 17px;
+    margin: 33px 0px;
+
+}
+
+.skillIcon {
+    width: 55.6%;
+    height: auto;
+}
+
+/*My Work Section Constructed using CSS Grid*/
+
+.myWork {
+    margin: 50px;
+}
+
+.workCard {
+    box-shadow: 1px 1px 10px grey;
+    border-radius: 50px;
+    width: 95%;
+    height: auto;
+}
+
+.workGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    row-gap: 50px;
+    padding: 30px 0px;
+    grid-template-areas:
+    "item1 item2"
+    "item3 item4"
+    "item5 item6"
+    ;
+}
+
+.item1 {
+    grid-area: item1;
+    ;
+  }
+  
+  .item2 {
+    grid-area: item2;
+    ;
+  }
+  
+  .item3 {
+    grid-area: item3;
+    ;
+  }
+  
+  .item4 {
+    grid-area: item4;
+    ;
+  }
+  
+  .item5 {
+    grid-area: item5;
+    ;
+  }
+  
+  .item6 {
+    grid-area: item6;
+    ;
+  }
+
+.viewAll {
+    display: flex;
+    justify-content: center;
+}
+
+/*mobile media query*/
+@media only screen and (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+    .skillCard {
+        width: 100%;
+    }
+    .workGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        ;
+    }
+    .workCard {
+        width: 100%;
+    }
+  }
+
 
